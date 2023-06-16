@@ -1,6 +1,6 @@
 body{
 	background-color: rgb(23, 20, 27);
-	color: white;
+	color: #d4d4d4;
 }
 span{
 	color: purple;
@@ -51,7 +51,7 @@ nav{
 	align-items: center;
 	margin: 0px 10px;
 
-	font-family: Georgia, 'Times New Roman', Times, serif ;
+	font-family: Helvetica, Arial, sans-serif;
 
 	text-align: justify;
 	text-justify: inter-word;
@@ -61,6 +61,9 @@ nav{
 	display: flex;
 	justify-content: space-around;
 	margin: 10px 0px;
+	border-top: 1px blueviolet solid;
+	padding-top: 15px;
+	margin: 5px;
 }
 
 h3{
@@ -121,6 +124,11 @@ footer{
 	justify-content: flex-end;
 	margin: 15px
 }
+
+.principal{
+	font-family: Tahoma, Verdana, sans-serif;
+}
+
 h1{
 	font-size: 50px;
 	margin: 10px;
@@ -130,3 +138,25 @@ h2{
 	font-size: 30px;
 	margin: 10px;
 }
+
+p{
+	font-size: 18px;
+	margin: 10px;
+
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+.imagenNoticia{
+	width: 95%;
+	height: 95%;
+	margin: 10px;
+
+}
+.epigrafe{
+	font-family: Verdana, Tahoma, sans-serif;
+	font-size: 14px;
+	border-bottom: 1px grey solid;
+	padding-bottom: 10px;
+}
+
