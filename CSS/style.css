@@ -151,8 +151,8 @@ p{
 	width: 95%;
 	height: 95%;
 	margin: 10px;
-
 }
+
 .epigrafe{
 	font-family: Verdana, Tahoma, sans-serif;
 	font-size: 14px;
@@ -160,3 +160,48 @@ p{
 	padding-bottom: 10px;
 }
 
+@media (min-width:600px) {
+	nav{
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	.navigator li{
+		display: flex;
+		margin: 10px 35px;
+	}
+
+	.navigator li a{
+		display: flex;
+	}
+
+	.menuIcon{
+		display: none;
+	}
+
+	body{
+		display: flex;
+		flex-direction: column;
+	}
+	main{
+		display: flex;
+		
+	}
+	.principal{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 70%;
+	}
+	.otras{
+		display: flex;
+		width: 28%;
+	}
+	
+	.imagenNoticia{
+		display: flex;
+		
+		width: 90%;
+		height: 90%;
+	}
+}
