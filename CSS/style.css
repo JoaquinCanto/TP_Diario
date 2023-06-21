@@ -7,6 +7,7 @@ span{
 }
 a{
 	text-decoration: none;
+	color: inherit;
 }
 
 a:visited{
@@ -45,6 +46,7 @@ ul{
 nav{
 	display: none;
 }
+
 .noticias, .otras{
 	display: flex;
 	flex-direction: column;
@@ -60,10 +62,19 @@ nav{
 .noticia{
 	display: flex;
 	justify-content: space-around;
-	margin: 10px 0px;
-	border-top: 1px blueviolet solid;
-	padding-top: 15px;
-	margin: 5px;
+	margin: 10px 5px;
+}
+
+.noticiaTitulo{
+	display: flex;
+	justify-content: space-around;
+	
+}
+
+.separator{
+	margin-top: 10px;
+	width: 100%;
+	border-top: 1px rgb(92, 43, 226) solid;
 }
 
 h3{
@@ -121,7 +132,7 @@ footer{
 
 .fechaNoticia{
 	display: flex;
-	justify-content: flex-end;
+	align-self: self-end;
 	margin: 15px
 }
 
@@ -183,19 +194,36 @@ p{
 		display: flex;
 		flex-direction: column;
 	}
+
 	main{
 		display: flex;
-		
+		flex-direction: column;
 	}
+
+	#mainNoticia{
+		display: flex;
+		flex-direction: row;
+	}
+
 	.principal{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		width: 70%;
+		width: 60%;
 	}
 	.otras{
 		display: flex;
-		width: 28%;
+		width: 30%;
+	}
+
+	.noticia{
+		display: flex;
+		justify-content: space-around;
+		margin: 10px 0px;
+	}
+	.noticias{
+		display: flex;
+		width: 100%;
 	}
 	
 	.imagenNoticia{
