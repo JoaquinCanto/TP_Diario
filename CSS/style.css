@@ -87,7 +87,10 @@ h3{
 }
 
 .prevImage{
-	background-image: url('./Images/imagen-no-disponible-mini.jpg');
+	background-image: url('../Images/imagen-no-disponible-mini.jpg');
+
+	min-width: 110px;
+	min-height: 61.88px;
 	width: 110px;
 	height: 61.88px;
 }
