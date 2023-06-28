@@ -14,6 +14,10 @@ a:visited{
 	color: inherit;
 }
 
+.subpagelink{
+	color: goldenrod;
+}
+
 strong{
 	font-weight: 700;
 }
@@ -171,6 +175,38 @@ p{
 	padding-bottom: 10px;
 }
 
+h4{
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 18px;
+}
+
+.formCont h4{
+	margin: 20px 0px;
+}
+
+.formulario{
+	width: 95%;
+}
+
+.formCont{
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+}
+
+.col1, .col2, .btn{
+	display: flex;
+	flex-direction: column;
+}
+
+.btnEnviar{
+	align-self: center;
+}
+
+.campo{
+	margin: 10px 20px;
+}
+
 @media (min-width:600px) {
 	nav{
 		display: flex;
@@ -232,4 +268,30 @@ p{
 		width: 90%;
 		height: 90%;
 	}
+
+	.formulario{
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.columnas{
+		display: flex;
+	}
+
+	.col1, .col2{
+		display: flex;
+		flex-grow: 5;
+	
+	}
+	.btn{
+		display: flex;
+		align-self: center;
+
+		margin: 10px 0px;
+	}
+
+	.campo{
+		margin: 10px 20px;
+	}
+	
 }
