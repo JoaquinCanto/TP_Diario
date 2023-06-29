@@ -6,6 +6,7 @@
 	<title>¡Subscribete!</title>
 	<link rel="stylesheet" type="text/css" href="./CSS/reset.css">
 	<link rel="stylesheet" type="text/css" href="./CSS/style.css">
+	<script src="./Scripts/validaciones.js"></script>
 </head>
 <body>
 <header>
@@ -31,26 +32,39 @@
 			<div class="columnas">
 				<div class="col1">
 					<input class="campo" type="text" name="nombreC" id="nombreC" placeholder="Nombre Completo">
+					<p class="valAlert" id="nombreAlert"></p>
 
 					<input class="campo" type="email" name="email" id="email" placeholder="Email">
+					<p class="valAlert" id="emailAlert"></p>
 
 					<input class="campo" type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
+					<p class="valAlert" id="contraAlert"></p>
+
 					<input class="campo" type="password" name="reContraseña" id="reContraseña" placeholder="Repetir Contraseña">
+					<p class="valAlert" id="recontraAlert"></p>
 
 					<input class="campo" type="number" name="edad" id="edad" placeholder="Edad">
+					<p class="valAlert" id="edadAlert"></p>
 				</div>
 				<div class="col2">
 					<input class="campo" type="tel" name="telefono" id="telefono" placeholder="Teléfono">
+					<p class="valAlert" id="telAlert"></p>
 
 					<input class="campo" type="text" name="direccion" id="direccion" placeholder="Direccion">
+					<p class="valAlert" id="dirAlert"></p>
+
 					<input class="campo" type="text" name="ciudad" id="ciudad" placeholder="Ciudad">
+					<p class="valAlert" id="ciudadAlert"></p>
+
 					<input class="campo" type="text" name="codPost" id="codPost" placeholder="Código Postal">
+					<p class="valAlert" id="codPostAlert"></p>
 
 					<input class="campo" type="text" name="DNI" id="DNI" placeholder="D.N.I.">
+					<p class="valAlert" id="dniAlert"></p>
 				</div>
 			</div>
 			<div class="btn">
-				<input class="btnEnviar" type="submit" value="Enviar">
+				<input class="btnEnviar" id="btnEnviar" type="submit" value="Enviar">
 			</div>
 		</form>
 	</div>
