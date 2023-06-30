@@ -211,7 +211,10 @@ h4{
 }
 
 .valAlert{
-	display: none;
+	visibility: hidden;
+	margin: 1px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 16px;
 }
 
 @media (min-width:600px) {
@@ -288,8 +291,8 @@ h4{
 	.col1, .col2{
 		display: flex;
 		flex-grow: 5;
-	
 	}
+	
 	.btn{
 		display: flex;
 		align-self: center;
@@ -300,5 +303,4 @@ h4{
 	.campo{
 		margin: 10px 20px;
 	}
-	
 }

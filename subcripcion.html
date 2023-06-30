@@ -6,7 +6,6 @@
 	<title>¡Subscribete!</title>
 	<link rel="stylesheet" type="text/css" href="./CSS/reset.css">
 	<link rel="stylesheet" type="text/css" href="./CSS/style.css">
-	<script src="./Scripts/validaciones.js"></script>
 </head>
 <body>
 <header>
@@ -27,40 +26,41 @@
 </header>
 <main>
 	<div class="formCont">
+		<h4 id="hi">¡Hola!</h4>
 		<h4>¡Registrate en nuestro diario!</h4>
 		<form action="" class="formulario">
 			<div class="columnas">
 				<div class="col1">
 					<input class="campo" type="text" name="nombreC" id="nombreC" placeholder="Nombre Completo">
-					<p class="valAlert" id="nombreAlert"></p>
+					<p class="valAlert" id="nombreAlert">Debe tener más de 6 letras y al menos un espacio entre medio.</p>
 
 					<input class="campo" type="email" name="email" id="email" placeholder="Email">
-					<p class="valAlert" id="emailAlert"></p>
+					<p class="valAlert" id="emailAlert">Debe tener un formato de email válido.</p>
 
 					<input class="campo" type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
-					<p class="valAlert" id="contraAlert"></p>
+					<p class="valAlert" id="contraAlert">Al menos 8 caracteres alfanuméricos.</p>
 
 					<input class="campo" type="password" name="reContraseña" id="reContraseña" placeholder="Repetir Contraseña">
-					<p class="valAlert" id="recontraAlert"></p>
+					<p class="valAlert" id="recontraAlert">Las contraseñas no coinciden.</p>
 
 					<input class="campo" type="number" name="edad" id="edad" placeholder="Edad">
-					<p class="valAlert" id="edadAlert"></p>
+					<p class="valAlert" id="edadAlert">Debe ser mayor de edad.</p>
 				</div>
 				<div class="col2">
 					<input class="campo" type="tel" name="telefono" id="telefono" placeholder="Teléfono">
-					<p class="valAlert" id="telAlert"></p>
+					<p class="valAlert" id="telAlert"> Número de al menos 7 dígitos, sin espacios ni guiones.</p>
 
-					<input class="campo" type="text" name="direccion" id="direccion" placeholder="Direccion">
-					<p class="valAlert" id="dirAlert"></p>
+					<input class="campo" type="text" name="direccion" id="direccion" placeholder="Dirección">
+					<p class="valAlert" id="dirAlert">Al menos 5 caracteres alfanuméricos.</p>
 
 					<input class="campo" type="text" name="ciudad" id="ciudad" placeholder="Ciudad">
-					<p class="valAlert" id="ciudadAlert"></p>
+					<p class="valAlert" id="ciudadAlert">Al menos 3 caracteres.</p>
 
 					<input class="campo" type="text" name="codPost" id="codPost" placeholder="Código Postal">
-					<p class="valAlert" id="codPostAlert"></p>
+					<p class="valAlert" id="codPostAlert">Al menos 3 caracteres.</p>
 
 					<input class="campo" type="text" name="DNI" id="DNI" placeholder="D.N.I.">
-					<p class="valAlert" id="dniAlert"></p>
+					<p class="valAlert" id="dniAlert">Número de 7 u 8 dígitos.</p>
 				</div>
 			</div>
 			<div class="btn">
@@ -91,5 +91,6 @@
 		Todos Los Derechos Reservados © 2023 Canto Inc.
 	</div>
 </footer>
+<script src="./Scripts/validaciones.js"></script>
 </body>
 </html>
