@@ -31,7 +31,10 @@ var dniAlert = document.getElementById('dniAlert');
 
 var hola = document.getElementById('hi');
 
-var btnEnviar = document.getElementById('btnEnviar').addEventListener('click', enviar);
+var btnEnviar = document.getElementById('Enviar');
+var modal = document.getElementById('modal');
+var btnCerrar = document.getElementById('cerrar');
+var mensaje = document.getElementById('mensajeModal');
 
 
 // RegEx
@@ -42,11 +45,6 @@ var alfRegEx = /^[a-zA-Z]+$/;
 var mailRegEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 // Funciones
-
-function enviar()
-{
-	alert('¡Datos enviados!')
-}
 
 function hide(id)
 {
@@ -70,6 +68,11 @@ function checkNombre()
 	if (!(nombre.value.length > 6 && nombre.value.includes(' ')))
 	{
 		show(nombreAlert);
+		return false;
+	}
+	else
+	{
+		return true;
 	}
 }
 
@@ -95,6 +98,11 @@ function checkEmail()
 	if (!(mailRegEx.test(email.value)))
 	{
 		show(emailAlert);
+		return false;
+	}
+	else
+	{
+		return true;
 	}
 }
 
@@ -106,6 +114,11 @@ function checkContra()
 	if (!(contra.value.length >= 8 && alfNumRegEx.test(contra.value)))
 	{
 		show(contraAlert);
+		return false;
+	}
+	else
+	{
+		return true;
 	}
 }
 
@@ -117,6 +130,11 @@ function checkRecontra()
 	if (recontra.value !== contra.value)
 	{
 		show(recontraAlert);
+		return false;
+	}
+	else
+	{
+		return true;
 	}
 }
 
@@ -128,6 +146,11 @@ function checkEdad()
 	if(edad.value < 18)
 	{
 		show(edadAlert);
+		return false;
+	}
+	else
+	{
+		return true;
 	}
 }
 
@@ -139,6 +162,11 @@ function checkTel()
 	if (!(tel.value.length >= 7 && numRegEx.test(tel.value)))
 	{
 		show(telAlert);
+		return false;
+	}
+	else
+	{
+		return true;
 	}
 }
 
@@ -150,6 +178,11 @@ function checkDir()
 	if (!(dir.value.length >= 5 && alNuSpRegEx.test(dir.value)))
 	{
 		show(dirAlert);
+		return false;
+	}
+	else
+	{
+		return true;
 	}
 }
 
@@ -161,6 +194,11 @@ function checkCiudad()
 	if (ciudad.value.length < 3)
 	{
 		show(ciudadAlert);
+		return false;
+	}
+	else
+	{
+		return true;
 	}
 }
 
@@ -173,6 +211,11 @@ function checkCodPost()
 	if (codPost.value.length < 3)
 	{
 		show(codPostAlert);
+		return false;
+	}
+	else
+	{
+		return true;
 	}
 }
 
@@ -184,5 +227,53 @@ function checkDNI()
 	if (!(dni.value.length >= 5 && numRegEx.test(dni.value)))
 	{
 		show(dniAlert);
+		return false;
 	}
+	else
+	{
+		return true;
+	}
+}
+
+btnEnviar.addEventListener('click', enviar);
+btnCerrar.addEventListener('click', cerrar);
+
+var alerta;
+function enviar()
+{
+	if (checkNombre() && checkEmail() && checkContra() && checkRecontra() && checkEdad() && checkTel() && checkDir() && checkCiudad() && checkCodPost() && checkDNI())
+	{
+		
+		alerta = 'Nombre: ' + nombre.value + "\nEmail: " + email.value + '\nContraseña: ' + contra.value + '\nEdad: ' + edad.value + '\nTelefono: ' + tel.value + '\nDireccion: ' 
+		+ dir.value + '\nCiudad: ' + ciudad.value + '\nCodigo Postal: ' + codPost.value + '\nDNI: ' + dni.value;
+		console.log(alerta);
+		fetch('https://jsonplaceholder.typicode.com/todos', 
+		{
+			method: 'GET',
+		})
+		.then(response => {
+		if (!response.ok) {
+			throw new Error('¡El servidor no responde!');
+			}
+			console.log(response);
+			return response;
+		})
+		.then(data => {
+			console.log('Correcto:');
+			mensaje.textContent ='¡Suscripción Exitosa!\n\n' + alerta;
+			modal.style.display = 'block'; // Mostrar el modal
+		})
+        .catch(error => {
+            // Mostrar mensaje de error en el modal
+            mensaje.textContent = 'Ocurrió un error al procesar la solicitud' + error;
+            modal.style.display = 'block'; // Mostrar el modal
+        });
+    }else{
+        alert("Por favor, complete todos los campos correctamente antes de enviar el formulario.");
+    }
+}
+
+function cerrar()
+{
+	modal.style.display = 'none';
 }
